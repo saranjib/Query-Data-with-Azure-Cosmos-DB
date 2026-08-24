@@ -29,3 +29,19 @@ query-data-with-azure-cosmos-db/
 └── README.md
 ```
 
+## Prerequisites
+
+Install:
+
+- Azure CLI
+- Terraform
+- Python 3.10+
+- An Azure subscription
+
+Authenticate:
+
+```bash
+az login
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
