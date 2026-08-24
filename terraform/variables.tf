@@ -9,3 +9,8 @@ variable "resource_group_name" {
   type        = string
   default     = "rg-cosmos-query-lab"
 }
+
+variable "cosmos_account_name" {
+  description = "Globally unique Cosmos DB account name"
+  type        = string
+}
