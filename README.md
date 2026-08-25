@@ -19,7 +19,7 @@ query-data-with-azure-cosmos-db/
 │   ├── main.tf
 │   ├── variables.tf
 │   ├── outputs.tf
-│   └── versions.tf
+│   └── provider.tf
 ├── .github/
 │   └── workflows/
 │       └── ci.yml
