@@ -24,3 +24,9 @@ resource "azurerm_cosmosdb_account" "rg-cosmos-query_account" {
 
   automatic_failover_enabled = false
 }
+
+resource "azurerm_cosmosdb_sql_database" "rg-cosmos-query_db" {
+  name                = var.database_name
+  resource_group_name = azurerm_resource_group.rg-cosmos-query-lab.name
+  account_name        = azurerm_cosmosdb_account.rg-cosmos-query-account.name
+}
