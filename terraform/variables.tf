@@ -14,3 +14,9 @@ variable "cosmos_account_name" {
   description = "Globally unique Cosmos DB account name"
   type        = string
 }
+
+variable "database_name" {
+  description = "Cosmos DB SQL database name"
+  type        = string
+  default     = "rg-cosmos-query_db"
+}
