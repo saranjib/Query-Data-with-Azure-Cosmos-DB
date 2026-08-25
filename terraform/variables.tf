@@ -20,3 +20,10 @@ variable "database_name" {
   type        = string
   default     = "rg-cosmos-query_db"
 }
+
+variable "container_name" {
+  description = "Cosmos DB SQL container name"
+  type        = string
+  default     = "rg-cosmos-query_container"
+}
+
