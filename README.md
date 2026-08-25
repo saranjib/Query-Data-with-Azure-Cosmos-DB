@@ -19,8 +19,7 @@ query-data-with-azure-cosmos-db/
 │   ├── main.tf
 │   ├── variables.tf
 │   ├── outputs.tf
-│   ├── versions.tf
-│   └── terraform.tfvars.example
+│   └── versions.tf
 ├── .github/
 │   └── workflows/
 │       └── ci.yml
