@@ -30,3 +30,16 @@ resource "azurerm_cosmosdb_sql_database" "rg-cosmos-query_db" {
   resource_group_name = azurerm_resource_group.rg-cosmos-query-lab.name
   account_name        = azurerm_cosmosdb_account.rg-cosmos-query-account.name
 }
+
+resource "azurerm_cosmosdb_sql_container" "rg-cosmos-query_container" {
+  name                  = var.container_name
+  resource_group_name   = azurerm_resource_group.rg-cosmos-query-lab.name
+  account_name          = azurerm_cosmosdb_account.rg-cosmos-query-account.name
+  database_name         = azurerm_cosmosdb_sql_database.rg-cosmos-query-db.name
+  partition_key_paths   = ["/category"]
+  partition_key_version = 2
+
+  indexing_policy {
+    indexing_mode = "consistent"
+  }
+}
